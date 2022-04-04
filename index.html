@@ -7,6 +7,27 @@
     <title>Cake House</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".cakesMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".cakes").offset().top - 60}, 1000);
+                return false;
+            });
+            $(".servicesMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".services").offset().top - 60}, 1000);
+                return false;
+            });
+            $(".chefsMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".chefs").offset().top - 60}, 1000);
+                return false;
+            });
+            $(".contactMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".contact").offset().top - 60}, 1000);
+                return false;
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -33,11 +54,11 @@
     <header>
         <div class="wrap">
             <ul>
-                <li><a href="#">Cakes</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#"><img src="./img/logo.png" alt="케잌하우스 로고"></a></li>
-                <li><a href="#">Chefs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="cakesMenu"><a href="#">Cakes</a></li>
+                <li class="servicesMenu"><a href="#">Service</a></li>
+                <li class="logoMenu"><a href="#"><img src="./img/logo.png" alt="케잌하우스 로고"></a></li>
+                <li class="chefsMenu"><a href="#">Chefs</a></li>
+                <li class="contactMenu"><a href="#">Contact</a></li>
             </ul>
         </div>
 
@@ -58,7 +79,7 @@
     </section>
 
     
-    <section id="main2">
+    <section id="main2" class="cakes">
         <div class="wrap">
             <div class="title">
                 <h2>Our Featured Cakes</h2>
@@ -142,7 +163,7 @@
         </div>
     </section>
 
-    <section id="main3">
+    <section id="main3" class="services">
         <div class="wrap">
             <div class="title">
                 <h2>Offer Services</h2>
@@ -221,7 +242,7 @@
         </div>
     </section>
 
-    <section id="main4">
+    <section id="main4" class="chefs">
         <div class="wrap">
             <div class="box">
                 <h2>Our Chefs</h2>
@@ -265,7 +286,7 @@
         </div>
     </section>
 
-    <section id="main5">
+    <section id="main5" class="contact">
         <div id="map"></div>
             <div class="cover">
                 <div class="wrap">
@@ -341,6 +362,7 @@
     </footer>
 
 
+    
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMOwJdqgkxI6MQb4E95pSSBF1TABF5pZA&callback=initMap"></script>
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs0f1jRgqGpm31rMjDb7JLfmeay-qOK3A&callback=initMap"></script> -->
